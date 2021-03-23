@@ -1,0 +1,10 @@
+# Jetbrains IDEs
+.idea/
+*.iml
+
+# JavaScript
+node_modules/
+yarn-error.log
+
+# Misc
+*.swp

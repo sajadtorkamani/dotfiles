@@ -2,7 +2,7 @@
 
 require "colorize"
 
-dotfiles = %w[.vim .vimrc .zshrc]
+dotfiles = %w[.gitignore_global .vim .vimrc .zshrc]
 
 dotfiles.each do |dotfile|
   src = File.join(__dir__, dotfile)
