@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-dotfiles = %w[.vimrc]
+dotfiles = %w[.vimrc .zshrc]
 
 dotfiles.each do |dotfile|
   src = File.join(__dir__, dotfile)
