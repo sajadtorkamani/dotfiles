@@ -1,4 +1,6 @@
-source ./lib/utils.zsh
+CWD=$HOME/code/dotfiles
+
+source $CWD/lib/utils.zsh
 
 initializers=(
   "env_vars"
@@ -10,5 +12,5 @@ initializers=(
 
 for initializer in "${initializers[@]}"
 do
-  source ./shell_initializers/$initializer.zsh
+  source $CWD/shell_initializers/$initializer.zsh
 done
