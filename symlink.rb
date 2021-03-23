@@ -12,5 +12,3 @@ dotfiles.each do |dotfile|
 
   system(`ln -s #{src} ~/#{dotfile}`)
 end
-
-# system(`ln -s #{vimrc} ~/.vimrc`)
