@@ -4,6 +4,8 @@ source $CWD/lib/utils.zsh
 
 initializers=(
   "env_vars"
+  "keyboard_speed"
+  "nvm"
   "ohmyzsh"
   "rbenv"
   "remap_keys"
@@ -14,3 +16,4 @@ for initializer in "${initializers[@]}"
 do
   source $CWD/shell_initializers/$initializer.zsh
 done
+
