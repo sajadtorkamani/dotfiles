@@ -1,7 +1,6 @@
- # Path to your oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_THEME="robbyrussell"
+export ZSH_THEME="avit"
 
-plugins=(git)
+plugins=(composer docker git gem node npm)
 
 source $ZSH/oh-my-zsh.sh
