@@ -7,6 +7,7 @@ initializers=(
   "keyboard_speed"
   "nvm"
   "ohmyzsh"
+  "path"
   "rbenv"
   "remap_keys"
   "system"
