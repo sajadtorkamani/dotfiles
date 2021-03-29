@@ -9,8 +9,7 @@ foreach ($dotfiles as $dotfile) {
 
     if (file_exists($dest)) {
         echo "Skipped: $dest already exists" . PHP_EOL;
-    }
-    else {
+    } else {
         symlink($src, $dest);
         echo "Symlinked: $dest points to $src" . PHP_EOL;
     }
