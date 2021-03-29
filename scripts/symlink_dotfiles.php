@@ -1,16 +1,19 @@
 <?php
-#!/usr/bin/env php
+define('ROOT_PATH', dirname(__FILE__, 2));
 
-$dotfiles = ['.gitignore_global', '.vim', '.vimrc', '.zshrc'];
+function symlinkDotfiles()
+{
+    $dotfiles = ['.gitignore_global', '.vim', '.vimrc', '.zshrc'];
 
-foreach ($dotfiles as $dotfile) {
-    $src = dirname(__FILE__, 2) . '/' . $dotfile;
-    $dest = $_SERVER['HOME'] . '/' . $dotfile;
+    foreach ($dotfiles as $dotfile) {
+        $target = ROOT_PATH . '/' . $dotfile;
+        $link = $_SERVER['HOME'] . '/' . $dotfile;
 
-    if (file_exists($dest)) {
-        echo "Skipped: $dest already exists" . PHP_EOL;
-    } else {
-        symlink($src, $dest);
-        echo "Symlinked: $dest points to $src" . PHP_EOL;
+        if (file_exists($link)) {
+            echo "Skipped: $link already exists" . PHP_EOL;
+        } else {
+            symlink($target, $link);
+            echo "Symlinked: $link points to $target" . PHP_EOL;
+        }
     }
 }

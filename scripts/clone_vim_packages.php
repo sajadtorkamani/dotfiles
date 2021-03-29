@@ -1,14 +1,31 @@
 <?php
-#!/usr/bin/env php
 
-$repoUrls = [
-    'https://github.com/jiangmiao/auto-pairs',
-    'https://github.com/ctrlpvim/ctrlp.vim',
-    'https://github.com/preservim/nerdtree',
-    'https://github.com/vim-airline/vim-airline',
-    'https://github.com/prettier/vim-prettier',
-    'https://github.com/vim-syntastic/syntastic'
-];
+function cloneVimPackages(): void
+{
+    foreach (getRepoUrls() as $repoUrl) {
+        $repoName = getRepoName($repoUrl);
+        $dest = getClonePath($repoName);
+
+        if (file_exists($dest)) {
+            echo "Skipping: $dest already exists" . PHP_EOL;
+        } else {
+            echo exec("git clone $repoUrl $dest");
+            echo "Cloned: $repoName to $dest" . PHP_EOL;
+        }
+    }
+}
+
+function getRepoUrls(): array
+{
+    return [
+        'https://github.com/jiangmiao/auto-pairs',
+        'https://github.com/ctrlpvim/ctrlp.vim',
+        'https://github.com/preservim/nerdtree',
+        'https://github.com/vim-airline/vim-airline',
+        'https://github.com/prettier/vim-prettier',
+        'https://github.com/vim-syntastic/syntastic'
+    ];
+}
 
 function getRepoName(string $repoUrl): string
 {
@@ -18,19 +35,6 @@ function getRepoName(string $repoUrl): string
 
 function getClonePath(string $repoName): string
 {
-    $rootPath = dirname(__FILE__, 2);
-    return $rootPath . '/.vim/pack/plugins/start/' . $repoName;
-}
-
-foreach ($repoUrls as $repoUrl) {
-    $repoName = getRepoName($repoUrl);
-    $dest = getClonePath($repoName);
-
-    if (file_exists($dest)) {
-        echo "Skipping: $dest already exists" . PHP_EOL;
-    } else {
-        echo exec("git clone $repoUrl $dest");
-        echo "Cloned: $repoName to $dest" . PHP_EOL;
-    }
+    return ROOT_PATH . '/.vim/pack/plugins/start/' . $repoName;
 }
 
