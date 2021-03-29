@@ -1,5 +1,5 @@
 <?php
-#!/usr/bin/env ruby
+#!/usr/bin/env php
 
 $repoUrls = [
     'https://github.com/jiangmiao/auto-pairs',
@@ -18,7 +18,7 @@ function getRepoName(string $repoUrl): string
 
 function getClonePath(string $repoName): string
 {
-    return __DIR__ . '/.vim/pack/plugins/start/' . $repoName;
+    return __DIR__ . '/../.vim/pack/plugins/start/' . $repoName;
 }
 
 foreach ($repoUrls as $repoUrl) {
