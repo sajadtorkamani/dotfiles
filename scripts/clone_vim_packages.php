@@ -18,7 +18,8 @@ function getRepoName(string $repoUrl): string
 
 function getClonePath(string $repoName): string
 {
-    return __DIR__ . '/../.vim/pack/plugins/start/' . $repoName;
+    $rootPath = dirname(__FILE__, 2);
+    return $rootPath . '/.vim/pack/plugins/start/' . $repoName;
 }
 
 foreach ($repoUrls as $repoUrl) {
