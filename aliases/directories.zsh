@@ -3,6 +3,7 @@ alias hosts="$EDITOR /etc/hosts"
 alias code="cd $HOME/code && l"
 alias sites="cd $HOME/sites && l"
 alias fleets="cd $HOME/Downloads/Fleeting && l"
+alias aliases="cd $HOME/code/dotfiles/aliases && l"
 
 if is_linux; then
   alias confs="cd /etc/nginx/sites-available && l"
