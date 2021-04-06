@@ -18,4 +18,4 @@ do
   source $CWD/shell_initializers/$initializer.zsh
 done
 
-php $CWD/scripts/print_quote.php
+php $CWD/scripts/inspire.php
