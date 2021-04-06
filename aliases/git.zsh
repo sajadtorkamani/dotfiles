@@ -14,3 +14,5 @@ alias gcb="git checkout"
 alias gp="git push origin HEAD"
 alias gcp="git cherry-pick"
 alias gwip="git add . && git commit -m 'WIP' && git push origin HEAD"
+
+alias gview="gh repo view -w"
