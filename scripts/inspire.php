@@ -7,7 +7,8 @@ $quotes = [
     "Progress not perfection",
     "I have learned to seek my happiness by limiting my desires, rather than in attempting to satisfy them.",
     'We are all going to die.',
-    "Love yourself first because that's who you'll be spending the rest of your life with."
+    "Love yourself first because that's who you'll be spending the rest of your life with.",
+    "Be kind to others for any person you meet could be only a few steps from a breakdown."
 ];
 
 echo $quotes[array_rand($quotes)];
