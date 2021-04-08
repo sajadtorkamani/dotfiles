@@ -3,7 +3,7 @@
 function cloneVimPackages(): void
 {
     foreach (getRepoUrls() as $repoUrl) {
-        $repoName = getRepoName($repoUrl);
+        $repoName = getRepoNameFromUrl($repoUrl);
         $dest = getClonePath($repoName);
 
         if (file_exists($dest)) {
@@ -27,7 +27,7 @@ function getRepoUrls(): array
     ];
 }
 
-function getRepoName(string $repoUrl): string
+function getRepoNameFromUrl(string $repoUrl): string
 {
     $urlParts = explode('/', $repoUrl);
     return end($urlParts);
