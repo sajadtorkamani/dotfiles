@@ -13,7 +13,7 @@ function symlinkAliases(): void
             echo "Skipping: $dest already exists" . PHP_EOL;
         } else {
             symlink($src, $dest);
-            echo "Aliases added: $alias";
+            echo "Aliases added: $alias" . PHP_EOL;
         }
     }
 }
