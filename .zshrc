@@ -11,6 +11,7 @@ initializers=(
   "rbenv"
   "remap_keys"
   "system"
+  "wp-cli_completion"
 )
 
 for initializer in "${initializers[@]}"
