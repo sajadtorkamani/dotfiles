@@ -3,20 +3,21 @@ CWD=$HOME/code/dotfiles
 source $CWD/lib/utils.zsh
 
 initializers=(
-  "env_vars"
-  "keyboard_speed"
+  "env-vars"
+  "keyboard-speed"
   "nvm"
   "ohmyzsh"
   "path"
   "rbenv"
-  "remap_keys"
+  "remap-keys"
   "system"
-  "wp-cli_completion"
+  "wp-completion"
+  "z"
 )
 
 for initializer in "${initializers[@]}"
 do
-  source $CWD/shell_initializers/$initializer.zsh
+  source $CWD/shell_initializers/$initializer.sh
 done
 
 php $CWD/scripts/inspire.php
