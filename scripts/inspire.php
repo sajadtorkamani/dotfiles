@@ -11,7 +11,8 @@ $quotes = [
     "Be kind to others for any person you meet could be only a few steps from unravelling.",
     "Humour is the saving grace of humanity.",
     "We become powerful when we stop making excuses for ourselves and when we give up the self-defeating habit of blaming others for our problems.",
-    "You're a dead man walking."
+    "You're a dead man walking.",
+    "No one knows what they're doing"
 ];
 
 echo $quotes[array_rand($quotes)];
