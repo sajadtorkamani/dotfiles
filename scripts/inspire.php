@@ -12,7 +12,8 @@ $quotes = [
     "Humour is the saving grace of humanity.",
     "We become powerful when we stop making excuses for ourselves and when we give up the self-defeating habit of blaming others for our problems.",
     "You're a dead man walking.",
-    "No one knows what they're doing"
+    "No one knows what they're doing",
+    "Good intentions don't work. Mechanisms do."
 ];
 
 echo $quotes[array_rand($quotes)];
