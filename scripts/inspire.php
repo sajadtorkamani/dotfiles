@@ -9,7 +9,9 @@ $quotes = [
     'We are all going to die.',
     "Love yourself first because that's who you'll be spending the rest of your life with.",
     "Be kind to others for any person you meet could be only a few steps from unravelling.",
-    "We become powerful when we stop making excuses for ourselves and when we give up the self-defeating habit of blaming others for our problems."
+    "Humour is the saving grace of humanity.",
+    "We become powerful when we stop making excuses for ourselves and when we give up the self-defeating habit of blaming others for our problems.",
+    "You're a dead man walking."
 ];
 
 echo $quotes[array_rand($quotes)];
