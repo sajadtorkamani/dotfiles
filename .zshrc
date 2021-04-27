@@ -1,6 +1,6 @@
 CWD=$HOME/code/dotfiles
 
-source $CWD/lib/utils.zsh
+source $CWD/lib/utils.sh
 
 initializers=(
   "env-vars"
