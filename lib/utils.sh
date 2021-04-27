@@ -1,3 +1,7 @@
+function cmd_exists() {
+  [[ -x "$(command -v $1)" ]]
+}
+
 function is_linux() {
   [[ $(uname) == "Linux" ]]
 }

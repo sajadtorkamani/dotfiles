@@ -20,4 +20,7 @@ do
   source $CWD/shell-initializers/$initializer.sh
 done
 
-php $CWD/scripts/inspire.php
+if cmd_exists quote; then
+  quote random
+fi
+
