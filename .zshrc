@@ -17,7 +17,7 @@ initializers=(
 
 for initializer in "${initializers[@]}"
 do
-  source $CWD/shell_initializers/$initializer.sh
+  source $CWD/shell-initializers/$initializer.sh
 done
 
 php $CWD/scripts/inspire.php
