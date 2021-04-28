@@ -6,6 +6,7 @@ alias sites="cd $HOME/sites && l"
 alias fleets="cd $HOME/Downloads/Fleeting && l"
 alias aliases="cd $HOME/code/dotfiles/aliases && l"
 alias downloads="cd $HOME/Downloads && l"
+alias debs="cd $HOME/Downloads/Debs && l"
 alias dumps="cd $HOME/dumps && l"
 
 if is_linux; then
