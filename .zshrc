@@ -21,6 +21,6 @@ do
 done
 
 if cmd_exists quote; then
-  quote random
+  quote
 fi
 
