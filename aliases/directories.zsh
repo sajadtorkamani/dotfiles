@@ -8,6 +8,7 @@ alias aliases="cd $HOME/code/dotfiles/aliases && l"
 alias downloads="cd $HOME/Downloads && l"
 alias debs="cd $HOME/Downloads/Debs && l"
 alias dumps="cd $HOME/dumps && l"
+alias dots="cd $HOME/code/dotfiles && l"
 
 if is_linux; then
   alias confs="cd /etc/nginx/sites-available && l"
