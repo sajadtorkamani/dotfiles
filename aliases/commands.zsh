@@ -4,6 +4,7 @@ alias ll="ls -l"
 alias c="clear"
 
 alias pa="php artisan"
+alias pat="php artisan test"
 
 alias copy="xclip -selection clipboard < $1"
 
