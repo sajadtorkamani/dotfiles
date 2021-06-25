@@ -4,6 +4,7 @@ source $CWD/lib/utils.sh
 
 initializers=(
   "env-vars"
+  "functions"
   "keyboard-speed"
   "nvm"
   "ohmyzsh"
@@ -17,7 +18,7 @@ initializers=(
 
 for initializer in "${initializers[@]}"
 do
-  source $CWD/shell-initializers/$initializer.sh
+  source $CWD/shell_initializers/$initializer.sh
 done
 
 if cmd_exists quote; then
