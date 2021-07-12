@@ -1,2 +1,4 @@
 .idea
 .vim/pack/plugins/start
+
+/vendor/

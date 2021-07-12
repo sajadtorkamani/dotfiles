@@ -1,5 +1,4 @@
 <?php
-define('ROOT_PATH', dirname(__FILE__, 2));
 
 function symlinkDotfiles()
 {

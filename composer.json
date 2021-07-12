@@ -1,0 +1,16 @@
+{
+    "name": "sajad/dotfiles",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+    },
+    "authors": [
+        {
+            "name": "Sajad Torkamani",
+            "email": "sajadtorkamani1@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    }
+}

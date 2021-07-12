@@ -1,19 +1,22 @@
 <?php
 
+/**
+ * Symlink aliases from `aliases/` directory into the `~/oh-my-zsh/custom/` directory.
+ */
 function symlinkAliases(): void
 {
     $aliasesDir = ROOT_PATH . '/aliases';
-    $aliases = array_diff(scandir($aliasesDir), ['.', '..']);
+    $aliasFiles = array_diff(scandir($aliasesDir), ['.', '..']);
 
-    foreach ($aliases as $alias) {
-        $src = $aliasesDir . '/' . $alias;
-        $dest = $_SERVER['HOME'] . '/.oh-my-zsh/custom/' . $alias;
+    foreach ($aliasFiles as $aliasFile) {
+        $src = $aliasesDir . '/' . $aliasFile;
+        $dest = $_SERVER['HOME'] . '/.oh-my-zsh/custom/' . $aliasFile;
 
         if (file_exists($dest)) {
             echo "Skipping: $dest already exists" . PHP_EOL;
         } else {
             symlink($src, $dest);
-            echo "Aliases added: $alias" . PHP_EOL;
+            echo "Aliases added: $aliasFile" . PHP_EOL;
         }
     }
 }
