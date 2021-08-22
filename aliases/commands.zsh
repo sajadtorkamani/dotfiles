@@ -1,19 +1,30 @@
-alias l="ls -l"
-alias la="ls -l"
-alias ll="ls -l"
-alias c="clear"
-
-alias pa="php artisan"
-alias pat="php artisan test"
-
-alias copy="xclip -selection clipboard < $1"
-
+# Docker
 alias d="docker"
 
 function ssh-docker() {
   docker container exec -it "$1" bash
 }
 
+# Laravel
+alias pa="php artisan"
+alias pat="php artisan test"
+
+# Rails
+alias r="bin/rails"
+
+# System
+alias l="ls -la"
+alias la="ls -la"
+alias ll="ls -la"
+alias c="clear"
+
+alias copy="xclip -selection clipboard < $1"
+
 if is_linux; then
   alias open="xdg-open"
+fi
+
+
+if is_mac; then
+  alias chrome="open -a 'Google Chrome'"
 fi

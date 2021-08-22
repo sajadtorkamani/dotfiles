@@ -12,3 +12,6 @@ yarn-error.log
 
 # Python
 **/__pycache__
+
+# macOS
+.DS_Store

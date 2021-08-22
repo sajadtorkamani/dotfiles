@@ -1,8 +1,6 @@
 <?php
 #!/usr/bin/env php
 
-require_once '../vendor/autoload.php';
-
 define('ROOT_PATH', dirname(__FILE__, 2));
 define('IS_LINUX', PHP_OS_FAMILY === 'Linux');
 define('IS_MAC', PHP_OS_FAMILY === 'Darwin');

@@ -2,7 +2,7 @@
 
 function symlinkDotfiles()
 {
-    $dotfiles = ['.gitignore_global', '.vim', '.vimrc', '.zshrc'];
+    $dotfiles = ['.gitignore_global', '.rspec', '.vim', '.vimrc', '.zshrc'];
 
     foreach ($dotfiles as $dotfile) {
         $target = ROOT_PATH . '/' . $dotfile;

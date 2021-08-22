@@ -6,11 +6,17 @@ source $BASE_PATH/lib/z.sh
 
 # Set env vars
 export EDITOR=vim
-export PATH="$HOME/.rbenv/bin:$PATH"
 export NODE_ENV="development"
 export VISUAL=vim
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="avit"
+
+# Set path
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+if is_mac; then
+  export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+fi
 
 # Load Oh My Zsh
 plugins=(composer docker git gem node npm)
@@ -43,6 +49,6 @@ bashcompinit
 # Setup bash completion for WP-CLI
 source $BASE_PATH/lib/wp-completion.sh
 
-if cmd_exists quote; then
-  # quote random
+if cmd_exists inspire; then
+  inspire
 fi
