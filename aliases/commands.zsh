@@ -11,6 +11,7 @@ alias pat="php artisan test"
 
 # Rails
 alias r="bin/rails"
+alias rr="r routes"
 
 # System
 alias l="ls -la"
