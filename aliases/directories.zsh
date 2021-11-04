@@ -1,5 +1,5 @@
 alias aliases="cd $HOME/code/dotfiles/aliases && l"
-alias code="cd $HOME/code && l"
+# alias code="cd $HOME/code && l"
 alias confs="cd /etc/nginx/sites-available && l"
 alias debs="cd $HOME/Downloads/Debs && l"
 alias docs="cd $HOME/Documents && l"
