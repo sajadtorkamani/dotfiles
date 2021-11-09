@@ -18,6 +18,7 @@ alias l="ls -la"
 alias la="ls -la"
 alias ll="ls -la"
 alias c="clear"
+alias dirsizes="du -sh */ | sort -hr"
 
 alias copy="xclip -selection clipboard < $1"
 
@@ -29,3 +30,7 @@ fi
 if is_mac; then
   alias chrome="open -a 'Google Chrome'"
 fi
+
+# Yarn
+alias ya="yarn add"
+alias yad="yarn add -D"
