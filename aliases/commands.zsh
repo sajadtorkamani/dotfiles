@@ -18,7 +18,7 @@ alias l="ls -la"
 alias la="ls -la"
 alias ll="ls -la"
 alias c="clear"
-alias dirsizes="du -sh */ | sort -hr"
+alias dirsizes="sudo du -sh */ | sort -hr"
 
 alias copy="xclip -selection clipboard < $1"
 
