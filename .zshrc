@@ -15,7 +15,9 @@ export LANG="en_US.UTF-8"
 # Set path
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$(go env GOPATH)/bin:$PATH"
+if cmd_exists go; then
+  export PATH="$(go env GOPATH)/bin:$PATH"
+fi
 
 if is_mac; then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
@@ -58,27 +60,7 @@ bashcompinit
 # Setup bash completion for WP-CLI
 source $BASE_PATH/lib/wp-completion.sh
 
-# Set shell completion for pipenv
-eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
-
 if cmd_exists inspire; then
   inspire
 fi
-
-# Automatially activate virtual env if Pipfile exists
-# https://github.com/pypa/pipenv/wiki/Run-pipenv-shell-automatically#zsh
-function auto_pipenv_shell {
-    if [ ! -n "${PIPENV_ACTIVE+1}" ]; then
-        if [ -f "Pipfile" ] ; then
-            pipenv shell
-        fi
-    fi
-}
-
-function cd {
-    builtin cd "$@"
-    auto_pipenv_shell
-}
-
-auto_pipenv_shell
 
