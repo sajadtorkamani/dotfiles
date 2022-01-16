@@ -7,6 +7,10 @@ function is_linux() {
   [[ $(uname) == "Linux" ]]
 }
 
+function is_wsl() {
+  [[ $(grep -i microsoft /proc/version) ]]
+}
+
 function is_mac() {
   [[ $(uname) == "Darwin" ]]
 }
