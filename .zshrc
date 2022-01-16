@@ -20,7 +20,8 @@ if cmd_exists go; then
 fi
 
 if is_mac; then
-  export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+  # export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+  export PATH="/usr/local/sbin:$PATH"
 fi
 
 # Load Oh My Zsh

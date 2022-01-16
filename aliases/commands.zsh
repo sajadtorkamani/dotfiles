@@ -1,5 +1,6 @@
 # Docker
 alias d="docker"
+alias dc="docker-compose"
 
 function ssh-docker() {
   docker container exec -it "$1" bash
