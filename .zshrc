@@ -33,7 +33,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Load rbenv
-eval "$(rbenv init -)"
+if cmd_exists rbenv; then
+  eval "$(rbenv init -)"
+fi
 
 # Load pyenv
 # eval "$(pyenv init -)"

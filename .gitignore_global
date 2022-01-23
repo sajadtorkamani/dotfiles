@@ -5,6 +5,7 @@
 # JavaScript
 node_modules/
 yarn-error.log
+.pnpm-debug.log
 
 # Misc
 *.swp
