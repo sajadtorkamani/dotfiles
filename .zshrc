@@ -20,7 +20,7 @@ if cmd_exists go; then
 fi
 
 if is_mac; then
-  # export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+  export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
   export PATH="/usr/local/sbin:$PATH"
 fi
 
@@ -37,11 +37,13 @@ if cmd_exists rbenv; then
   eval "$(rbenv init -)"
 fi
 
-# Load pyenv
-# eval "$(pyenv init -)"
+if cmd_exists pyenv; then
+  # Load pyenv
+  eval "$(pyenv init -)"
 
-# Load pyenv-virtualenv
-# eval "$(pyenv virtualenv-init -)"
+  # Load pyenv-virtualenv
+  eval "$(pyenv virtualenv-init -)"
+fi
 
 if is_linux; then
   # Prevent ctrl+s from freezing terminal (https://tinyurl.com/nsr9z9p8)

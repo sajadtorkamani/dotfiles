@@ -27,7 +27,6 @@ if is_linux; then
   alias open="xdg-open"
 fi
 
-
 if is_mac; then
   alias chrome="open -a 'Google Chrome'"
 fi
@@ -35,3 +34,4 @@ fi
 # Yarn
 alias ya="yarn add"
 alias yad="yarn add -D"
+
