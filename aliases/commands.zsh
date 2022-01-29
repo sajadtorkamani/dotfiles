@@ -37,3 +37,7 @@ fi
 alias ya="yarn add"
 alias yad="yarn add -D"
 
+killport() {
+  lsof -i tcp:$1 | awk 'NR!=1 {print $2}' | xargs -r kill 
+}
+
