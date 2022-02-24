@@ -10,6 +10,9 @@ function ssh-docker() {
 alias pa="php artisan"
 alias pat="php artisan test"
 
+# Ruby
+alias bi="bundle install"
+
 # Rails
 alias r="bin/rails"
 alias rr="r routes"
@@ -38,7 +41,6 @@ alias ya="yarn add"
 alias yad="yarn add -D"
 
 # Networking
-#
 killport() {
   lsof -i tcp:$1 | awk 'NR!=1 {print $2}' | xargs -r kill 
 }

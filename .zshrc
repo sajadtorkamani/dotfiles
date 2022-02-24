@@ -15,9 +15,7 @@ export LANG="en_US.UTF-8"
 # Set path
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-if cmd_exists go; then
-  export PATH="$(go env GOPATH)/bin:$PATH"
-fi
+export PATH=$PATH:/usr/local/go/bin
 
 if is_mac; then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
