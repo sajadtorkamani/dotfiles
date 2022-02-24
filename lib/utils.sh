@@ -8,7 +8,7 @@ function is_linux() {
 }
 
 function is_wsl() {
-  [[ $(grep -i microsoft /proc/version) ]]
+  [[ -f /proc/version && $(grep -i microsoft /proc/version) ]]
 }
 
 function is_mac() {
