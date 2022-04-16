@@ -7,12 +7,12 @@ function is_linux() {
   [[ $(uname) == "Linux" ]]
 }
 
-function is_wsl() {
-  [[ -f /proc/version && $(grep -i microsoft /proc/version) ]]
-}
-
 function is_mac() {
   [[ $(uname) == "Darwin" ]]
+}
+
+function is_wsl() {
+  [[ -f /proc/version && $(grep -i microsoft /proc/version) ]]
 }
 
 # Set correct directory permissions
