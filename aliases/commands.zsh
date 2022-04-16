@@ -11,7 +11,7 @@ alias pa="php artisan"
 alias pat="php artisan test"
 
 # Ruby
-alias bi="bundle install"
+alias bi="./bin/bundle install"
 
 # Rails
 alias r="bin/rails"
@@ -40,10 +40,8 @@ fi
 alias ya="yarn add"
 alias yad="yarn add -D"
 
-# Networking
-killport() {
-  lsof -i tcp:$1 | awk 'NR!=1 {print $2}' | xargs -r kill 
-}
-
-alias ports="sudo lsof -Pn -i"
-
+# NPM
+alias n="npm"
+alias ni="npm install"
+alias nid="npm install -D"
+alias nr="npm run"
