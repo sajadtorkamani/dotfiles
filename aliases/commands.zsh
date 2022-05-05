@@ -12,10 +12,13 @@ alias pat="php artisan test"
 
 # Ruby
 alias bi="./bin/bundle install"
+alias ru="./bin/rubocop"
 
 # Rails
 alias r="bin/rails"
 alias rr="r routes"
+alias rs="./bin/rspec"
+alias ra="rs"
 
 # System
 alias l="ls -la"
@@ -40,7 +43,7 @@ fi
 alias ya="yarn add"
 alias yad="yarn add -D"
 
-# NPM
+# NPM
 alias n="npm"
 alias ni="npm install"
 alias nid="npm install -D"

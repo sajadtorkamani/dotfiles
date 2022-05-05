@@ -14,7 +14,9 @@ alias gcb="git checkout"
 alias gp="git push origin HEAD"
 alias gcp="git cherry-pick"
 alias gwip="git add . && git commit -m 'WIP' && git push origin HEAD"
-alias gstyle="git add . && git commit -m 'Style' && git push origin HEAD"
+alias gref="git add . && git commit -m 'Refactor' && git push origin HEAD"
+alias gsty="git add . && git commit -m 'Style' && git push origin HEAD"
+alias numcommits="git rev-list HEAD --count"
 
 # GitHub CLI aliases
 alias gview="gh repo view -w"

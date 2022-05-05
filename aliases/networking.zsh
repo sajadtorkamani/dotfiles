@@ -14,3 +14,5 @@ alias ports="sudo lsof -Pn -i"
 # Homebrew
 alias b="brew"
 alias bs="brew services"
+
+alias transfer="rsync -LPa"
