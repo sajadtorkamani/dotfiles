@@ -7,8 +7,8 @@ function download-playlist() {
 }
 
 function copy-ssh-key() {
-  if is_mac; 
-  then
+  if is_mac; then
+    alias copy-ssh-key="pbcopy < ~/.ssh/id_ed25519.pub"
   else
     alias copy-ssh-key="xclip -selection clipboard < ~/.ssh/id_ed25519.pub"
   fi
