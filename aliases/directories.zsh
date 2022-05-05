@@ -1,5 +1,4 @@
 alias aliases="cd $HOME/code/dotfiles/aliases && l"
-alias confs="cd /etc/nginx/sites-available && l"
 alias debs="cd $HOME/Downloads/Debs && l"
 alias docs="cd $HOME/Documents && l"
 alias dots="cd $HOME/code/dotfiles && l"
@@ -13,5 +12,5 @@ alias sites="cd $HOME/sites && l"
 if is_linux; then
   alias confs="cd /etc/nginx/sites-available && l"
 else
-  alias confs="cd /usr/local/etc/nginx/sites-available && l"
+  alias confs="cd /opt/homebrew/etc/nginx/sites-available && l"
 fi

@@ -1,5 +1,6 @@
 <?php
 
+// Depreceated: Not using this at the moment.
 function symlinkSshConfig()
 {
     $target = getSshConfig();
