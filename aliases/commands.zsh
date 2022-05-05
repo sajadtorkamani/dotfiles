@@ -21,9 +21,9 @@ alias rs="./bin/rspec"
 alias ra="rs"
 
 # System
-alias l="ls -la"
+alias l="ls -l"
 alias la="ls -la"
-alias ll="ls -la"
+alias ll="ls -l"
 alias c="clear"
 alias dirsizes="sudo du -sh */ | sort -hr"
 alias sizes="du -ahd1"
