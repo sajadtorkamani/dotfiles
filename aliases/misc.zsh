@@ -13,3 +13,7 @@ function copy-ssh-key() {
     alias copy-ssh-key="xclip -selection clipboard < ~/.ssh/id_ed25519.pub"
   fi
 }
+
+function npms() {
+  open "https://www.npmjs.com/package/$1"
+}
