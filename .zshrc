@@ -23,13 +23,15 @@ export LANG="en_US.UTF-8"
 # Set path
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH=$PATH:/usr/local/go/bin
 
 if is_mac; then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
   export PATH="/usr/local/sbin:$PATH"
   export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 fi
+
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$HOME/code/scripts/bin"
 
 # Load Oh My Zsh
 plugins=(composer docker git gem node npm)
