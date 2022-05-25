@@ -23,6 +23,9 @@ alias rr="r routes"
 alias rs="./bin/rspec"
 alias ra="rs"
 
+# Symfony
+alias s="symfony"
+
 # System
 alias l="ls -l"
 alias la="ls -la"
