@@ -13,15 +13,21 @@ function ssh-docker() {
 alias pa="php artisan"
 alias pat="php artisan test"
 
-# Ruby
-alias bi="./bin/bundle install"
-alias ru="./bin/rubocop"
+# NPM
+alias n="npm"
+alias ni="npm install"
+alias nid="npm install -D"
+alias nr="npm run"
 
 # Rails
 alias r="bin/rails"
 alias rr="r routes"
 alias rs="./bin/rspec"
 alias ra="rs"
+
+# Ruby
+alias bi="./bin/bundle install"
+alias ru="./bin/rubocop"
 
 # Symfony
 alias s="symfony"
@@ -49,8 +55,3 @@ fi
 alias ya="yarn add"
 alias yad="yarn add -D"
 
-# NPM
-alias n="npm"
-alias ni="npm install"
-alias nid="npm install -D"
-alias nr="npm run"
