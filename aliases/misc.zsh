@@ -17,3 +17,5 @@ function copy-ssh-key() {
 function npms() {
   open "https://www.npmjs.com/package/$1"
 }
+
+alias npmlsg="npm ls -g --depth=0"
