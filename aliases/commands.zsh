@@ -31,6 +31,7 @@ alias ru="./bin/rubocop"
 
 # Symfony
 alias s="symfony"
+alias bc="./bin/console"
 
 # System
 alias l="ls -l"
