@@ -15,6 +15,7 @@ yarn-error.log
 
 # PHP
 .phpunit.result.cache
+.php-cs-fixer.cache
 
 # macOS
 .DS_Store
