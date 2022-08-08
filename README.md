@@ -1,3 +1,2 @@
 ## TODO
-- Currently depend on PHP to run setup scripts (`scripts/*`). Could replace 
-with Deno or Go scripts instead (both are single executables).
+Might be a fun exercise to to write the scripts in `scripts/*` in GoLang.
