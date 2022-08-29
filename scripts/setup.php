@@ -12,3 +12,4 @@ require_once 'symlink_dotfiles.php';
 cloneVimPackages();
 symlinkAliases();
 symlinkDotfiles();
+

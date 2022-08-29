@@ -20,3 +20,4 @@ function symlinkAliases(): void
         }
     }
 }
+
