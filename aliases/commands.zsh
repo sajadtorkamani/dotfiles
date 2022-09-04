@@ -38,7 +38,6 @@ alias bc="./bin/console"
 # System
 alias l="ls -l"
 alias la="ls -la"
-alias ll="ls -l"
 alias c="clear"
 alias dirsizes="sudo du -sh */ | sort -hr"
 alias sizes="du -ahd1"
