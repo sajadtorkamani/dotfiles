@@ -17,6 +17,7 @@ alias pat="php artisan test"
 # NPM
 alias n="npm"
 alias ni="npm install"
+alias nu="npm uninstall"
 alias nid="npm install -D"
 alias nr="npm run"
 alias nclean="rm -rf node_modules package-lock.json  && npm i"
