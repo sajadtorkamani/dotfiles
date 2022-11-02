@@ -1,15 +1,6 @@
 # Composer
 alias co="composer"
 
-# Docker
-alias d="docker"
-alias dc="docker-compose"
-alias docker-stop-all="docker stop $(docker ps -q)"
-
-function ssh-docker() {
-  docker container exec -it "$1" bash
-}
-
 # Laravel
 alias pa="php artisan"
 alias pat="php artisan test"
@@ -35,6 +26,7 @@ alias ru="./bin/rubocop"
 # Symfony
 alias s="symfony"
 alias bc="./bin/console"
+alias fix-tmp-permissions=" docker-compose exec php chmod 777 -R /tmp/cache &&  docker-compose exec php chmod 777 -R /tmp/log"
 
 # System
 alias l="ls -l"
