@@ -1,6 +1,9 @@
 alias d="docker"
 alias dc="docker-compose"
-alias docker-stop-all="docker stop $(docker ps -q)"
+
+function docker-stop-all() {
+  docker stop $(docker ps -q)
+}
 
 function ssh-docker() {
   docker container exec -it "$1" bash
