@@ -5,6 +5,7 @@ alias gc="git commit"
 alias gl='git log --pretty=format:"%C(yellow)%h %C(white)%s %C(blue)%ad %C(green)(%an)" --date=relative'
 alias gl1='git log --pretty=format:"%C(yellow)%h %C(white)%s %C(blue)%ad %C(green)(%an)" --date=relative'
 alias glast="git show"
+alias gfo="git fetch origin"
 alias gst="git stash -u"
 alias gstap="git stash apply"
 alias gsl="git stash list"
