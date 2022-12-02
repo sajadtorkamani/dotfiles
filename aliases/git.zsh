@@ -3,6 +3,7 @@ alias gd="git diff"
 alias ga="git add"
 alias gc="git commit"
 alias gcb="git checkout -b"
+alias gch="git checkout"
 alias gcp="git cherry-pick"
 alias gl='git log --pretty=format:"%C(yellow)%h %C(white)%s %C(blue)%ad %C(green)(%an)" --date=relative'
 alias gl1='git log --pretty=format:"%C(yellow)%h %C(white)%s %C(blue)%ad %C(green)(%an)" --date=relative'
