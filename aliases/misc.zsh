@@ -1,6 +1,10 @@
 alias path='echo $PATH | tr -s ":" "\n"'
 alias v="vim"
 alias isodate="date +'%Y%m%d%H%M%S'"
+function rsp() {
+  dc exec php ./bin/console app:reset-roles-and-permissions --summary &&
+  dc exec php ./bin/console c:c
+}
 
 function download-playlist() {
   yt-dlp $1 -x --audio-format mp3

@@ -26,6 +26,7 @@ alias ru="./bin/rubocop"
 # Symfony
 alias s="symfony"
 alias bc="./bin/console"
+alias cc="docker-compose exec php bin/console cache:clear"
 alias fix-tmp-permissions=" docker-compose exec php chmod 777 -R /tmp/cache &&  docker-compose exec php chmod 777 -R /tmp/log"
 
 # System
