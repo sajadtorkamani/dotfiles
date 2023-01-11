@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+const quotes = [
+  "I'm not saying I hate you, but I would unplug your life support to charge my phone",
+  "I don't always have a lot to say, but when I do, I prefer to say it to my therapist",
+  "I'm not saying you're stupid, I'm just saying you have bad luck when it comes to thinking",
+  "I'm not a hoarder, I'm just sentimental about my clutter",
+  "Behind every great man is a woman rolling her eyes"
+];
+
+const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+console.log(randomQuote);
