@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+const slugify = (input) => {
+  return input.toLowerCase().replace(/[^a-z0-9-]/g, '-')
+}
+
+const input = process.argv[2] || ''
+console.log("\n" + slugify(input))
