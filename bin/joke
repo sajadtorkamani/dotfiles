@@ -5,7 +5,8 @@ const quotes = [
   "I don't always have a lot to say, but when I do, I prefer to say it to my therapist",
   "I'm not saying you're stupid, I'm just saying you have bad luck when it comes to thinking",
   "I'm not a hoarder, I'm just sentimental about my clutter",
-  "Behind every great man is a woman rolling her eyes"
+  "Behind every great man is a woman rolling her eyes",
+  "Why did the skeleton go to the party alone? He had no body to go with him!"
 ];
 
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
