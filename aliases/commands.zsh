@@ -26,12 +26,14 @@ alias ru="./bin/rubocop"
 # Symfony
 alias s="symfony"
 alias bc="./bin/console"
-alias cc="docker-compose exec php bin/console cache:clear"
 alias fix-tmp-permissions=" docker-compose exec php chmod 777 -R /tmp/cache &&  docker-compose exec php chmod 777 -R /tmp/log"
+alias cc="docker-compose exec php bin/console cache:clear"
+alias dml=" dc exec --user=www-data php bin/console doc:mig:list"
+alias dmm=" dc exec --user=www-data php bin/console doc:mig:mig"
 
 # System
-alias l="ls -l"
-alias la="ls -la"
+alias l="exa -l"
+alias la="exa -la"
 alias c="clear"
 alias dirsizes="sudo du -sh */ | sort -hr"
 alias sizes="du -ahd1"
