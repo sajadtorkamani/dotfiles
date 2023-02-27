@@ -29,5 +29,7 @@ function gbackup() {
 }
 
 # GitHub CLI aliases
-alias gview="gh repo view -w"
+function gview() {
+  gh repo view -w -b $(gbranch)
+}
 alias gcreate=" gh repo create --private --source ."
