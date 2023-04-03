@@ -30,6 +30,8 @@ alias fix-tmp-permissions=" docker-compose exec php chmod 777 -R /tmp/cache &&  
 alias cc="docker-compose exec php bin/console cache:clear"
 alias dml=" dc exec --user=www-data php bin/console doc:mig:list"
 alias dmm=" dc exec --user=www-data php bin/console doc:mig:mig"
+alias dmr=" dc exec --user=www-data php bin/console doc:mig:mig prev"
+alias dmd=" dc exec --user=www-data php bin/console doc:mig:diff"
 
 # System
 alias l="exa -l"
