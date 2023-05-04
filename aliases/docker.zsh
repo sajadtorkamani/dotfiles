@@ -9,6 +9,10 @@ function ssh-docker() {
   docker container exec -it "$1" bash
 }
 
+function stop-docker() {
+  osascript -e 'quit app "Docker"'
+}
+
 # SSH onto Docker VM
 # https://stackoverflow.com/questions/38532483/where-is-var-lib-docker-on-mac-os-x
 function docker-vm() {

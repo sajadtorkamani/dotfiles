@@ -1,6 +1,7 @@
 alias path='echo $PATH | tr -s ":" "\n"'
 alias v="vim"
 alias isodate="date +'%Y%m%d%H%M%S'"
+alias phpexec="dc exec --user=www-data php"
 
 function rsp() {
   dc exec php ./bin/console app:reset-roles-and-permissions --summary &&
