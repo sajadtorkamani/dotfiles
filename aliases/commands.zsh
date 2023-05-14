@@ -32,6 +32,7 @@ alias dml=" dc exec --user=www-data php bin/console doc:mig:list"
 alias dmm=" dc exec --user=www-data php bin/console doc:mig:mig"
 alias dmr=" dc exec --user=www-data php bin/console doc:mig:mig prev"
 alias dmd=" dc exec --user=www-data php bin/console doc:mig:diff"
+alias dx="dc exec --user=www-data php"
 
 # System
 alias l="exa -l"
@@ -55,3 +56,5 @@ fi
 alias ya="yarn add"
 alias yad="yarn add -D"
 
+# Misc
+alias update-aliases="php $HOME/code/dotfiles/scripts/setup.php && szconf"
