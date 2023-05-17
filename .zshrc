@@ -80,10 +80,6 @@ bashcompinit
 # Setup bash completion for WP-CLI
 source $BASE_PATH/lib/wp-completion.sh
 
-if cmd_exists inspire; then
-  inspire
-fi
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -102,3 +98,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # AWS
 eval "$(aws configure export-credentials --profile default --format env)"
+
