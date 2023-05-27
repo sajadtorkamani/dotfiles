@@ -1,4 +1,4 @@
-alias aliases="cd $HOME/code/dotfiles/aliases && l"
+alias aliases="code $HOME/code/dotfiles/aliases"
 alias debs="cd $HOME/Downloads/Debs && l"
 alias docs="cd $HOME/Documents && l"
 alias dots="cd $HOME/code/dotfiles && l"

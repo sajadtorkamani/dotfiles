@@ -77,8 +77,9 @@ fi
 autoload bashcompinit
 bashcompinit
 
-# Setup bash completion for WP-CLI
+# Setup bash completions
 source $BASE_PATH/lib/wp-completion.sh
+source $BASE_PATH/lib/deno.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -87,7 +88,6 @@ source $BASE_PATH/lib/wp-completion.sh
 HOME=${HOME:-'/Users/sajad'}
 export PATH="$HOME/"'.platformsh/bin':"$PATH"
 if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
-
 
 # bun completions
 [ -s "/Users/sajad/.bun/_bun" ] && source "/Users/sajad/.bun/_bun"
