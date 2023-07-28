@@ -28,6 +28,7 @@ if is_mac; then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
   export PATH="/usr/local/sbin:$PATH"
   export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+  export PATH="/Applications/PhpStorm.app/Contents/MacOS:$PATH"
 
   # https://stackoverflow.com/a/47111756/2302835
   if cmd_exists python; then

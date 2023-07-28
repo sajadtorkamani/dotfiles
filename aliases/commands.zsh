@@ -35,8 +35,9 @@ alias dmd=" dc exec --user=www-data php bin/console doc:mig:diff"
 alias dx="dc exec --user=www-data php"
 
 # PHP
-alias pua="dc exec php ./clear-test-db.sh && export SYMFONY_DEPRECATIONS_HELPER=weak && php -d memory_limit=2048M ./vendor/bin/phpunit --stop-on-failure"
-alias puf="dc exec php ./clear-test-db.sh && export SYMFONY_DEPRECATIONS_HELPER=weak && php -d memory_limit=2048M ./vendor/bin/phpunit --stop-on-failure --filter"
+alias puaa="dc exec php ./clear-test-db.sh && export SYMFONY_DEPRECATIONS_HELPER=weak && php -d memory_limit=3072M ./vendor/bin/phpunit"
+alias pua="dc exec php ./clear-test-db.sh && export SYMFONY_DEPRECATIONS_HELPER=weak && php -d memory_limit=3072M ./vendor/bin/phpunit --stop-on-failure"
+alias puf="dc exec php ./clear-test-db.sh && export SYMFONY_DEPRECATIONS_HELPER=weak && php -d memory_limit=3072M ./vendor/bin/phpunit --stop-on-failure --filter"
 
 # System
 alias l="exa -l"

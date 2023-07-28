@@ -5,7 +5,7 @@ alias phpexec="dc exec --user=www-data php"
 
 function rsp() {
   dc exec php ./bin/console app:reset-roles-and-permissions --summary &&
-  dc exec php ./bin/console c:c
+    dc exec php ./bin/console c:c
 }
 
 function phpcs() {
@@ -30,4 +30,4 @@ function npms() {
 
 alias npmlsg="npm ls -g --depth=0"
 
-alias phpcs="dc exec --user=www-data php vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix $(gut)"
+alias phpcs="dc exec --user=www-data php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php $(gut)"
