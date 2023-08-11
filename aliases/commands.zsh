@@ -63,3 +63,5 @@ alias yad="yarn add -D"
 
 # Misc
 alias update-aliases="php $HOME/code/dotfiles/scripts/setup.php && szconf"
+alias xde="./xdebug.sh enable"
+alias xdd="./xdebug.sh disable"
