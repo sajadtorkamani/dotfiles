@@ -30,4 +30,4 @@ function npms() {
 
 alias npmlsg="npm ls -g --depth=0"
 
-alias phpcs="dc exec --user=www-data php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php $(gut)"
+alias foo="echo 'bar'"

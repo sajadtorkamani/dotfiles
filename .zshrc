@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 BASE_PATH=$HOME/code/dotfiles
 
 # Source a bunch of files
@@ -44,6 +37,9 @@ export PATH="$PATH:$HOME/code/bin"
 plugins=(composer docker git gem node npm)
 source $ZSH/oh-my-zsh.sh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Load NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -82,9 +78,6 @@ bashcompinit
 source $BASE_PATH/lib/wp-completion.sh
 source $BASE_PATH/lib/deno.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # BEGIN SNIPPET: Platform.sh CLI configuration
 HOME=${HOME:-'/Users/sajad'}
 export PATH="$HOME/"'.platformsh/bin':"$PATH"
@@ -99,4 +92,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # AWS
 eval "$(aws configure export-credentials --profile default --format env)"
-
