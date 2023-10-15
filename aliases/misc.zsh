@@ -29,3 +29,4 @@ function npms() {
 }
 
 alias npmlsg="npm ls -g --depth=0"
+alias asl="aws sso login"
