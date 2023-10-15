@@ -6,8 +6,8 @@ source $BASE_PATH/lib/z.sh
 
 # Set env vars
 export EDITOR=vim
-export BUND E_EDITOR=mine
 export NODE_ENV="development"
+export IDE="phpstorm"
 export VISUAL=vim
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="powerlevel10k/powerlevel10k"

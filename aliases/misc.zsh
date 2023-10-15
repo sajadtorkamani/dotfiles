@@ -29,5 +29,3 @@ function npms() {
 }
 
 alias npmlsg="npm ls -g --depth=0"
-
-alias foo="echo 'bar'"
