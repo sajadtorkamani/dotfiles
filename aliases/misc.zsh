@@ -16,6 +16,7 @@ function download-playlist() {
   yt-dlp $1 -x --audio-format mp3
 }
 
+
 function copy-ssh-key() {
   if is_mac; then
     alias copy-ssh-key="pbcopy < ~/.ssh/id_ed25519.pub"

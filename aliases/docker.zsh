@@ -1,6 +1,11 @@
 alias d="docker"
 alias dc="docker-compose"
 
+function restart-docker() {
+  quit-docker
+  open-docker
+}
+
 function docker-stop-all() {
   docker stop $(docker ps -q)
 }
@@ -9,8 +14,13 @@ function ssh-docker() {
   docker container exec -it "$1" bash
 }
 
-function stop-docker() {
-  osascript -e 'quit app "Docker"'
+function quit-docker() {
+  if is_mac; then
+    osascript -e 'quit app "Docker"'
+  else
+    echo "Don't know how to exit Docker on non-macOS system."
+    exit 1
+  fi
 }
 
 # SSH onto Docker VM
@@ -20,3 +30,7 @@ function docker-vm() {
 }
 
 alias dce="docker-compose exec"
+
+function open-docker() {
+  open -a Docker
+}
