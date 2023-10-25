@@ -8,7 +8,6 @@ function rsp() {
     dc exec php ./bin/console c:c
 }
 
-
 # Run PHPUnit tests inside Docker Composer service
 function dt() {
   if [ -z "$1" ]; then
@@ -16,9 +15,9 @@ function dt() {
     return
   fi
 
-  dce php ./clear-test-db.sh &&
+  dce php /bin/bash -c "./clear-test-db.sh &&
   export SYMFONY_DEPRECATIONS_HELPER=weak &&
-  php -d memory_limit=3072M ./vendor/bin/phpunit  --stop-on-failure  --filter "$1"
+  php -d memory_limit=3072M ./vendor/bin/phpunit  --stop-on-failure  --filter $1"
 }
 
 function phpcs() {
@@ -28,7 +27,6 @@ function phpcs() {
 function download-playlist() {
   yt-dlp $1 -x --audio-format mp3
 }
-
 
 function copy-ssh-key() {
   if is_mac; then
