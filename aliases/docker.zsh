@@ -1,10 +1,12 @@
 alias d="docker"
 alias dc="docker-compose"
+alias dcr="docker-compose restart"
 
 function restart-docker() {
   quit-docker
   open-docker
 }
+
 
 function docker-stop-all() {
   docker stop $(docker ps -q)

@@ -8,6 +8,23 @@ function rsp() {
     dc exec php ./bin/console c:c
 }
 
+function _run-tests() {
+  ./clear-test-db.sh &&
+  export SYMFONY_DEPRECATIONS_HELPER=weak &&
+  php -d memory_limit=3072M ./vendor/bin/phpunit  --stop-on-failure  --filter
+}
+
+function dt() {
+  if [ -z "$1" ]; then
+    echo "Please provide a test filter"
+    return
+  fi
+
+  dce php ./clear-test-db.sh &&
+  export SYMFONY_DEPRECATIONS_HELPER=weak &&
+  php -d memory_limit=3072M ./vendor/bin/phpunit  --stop-on-failure  --filter "$1"
+}
+
 function phpcs() {
   docker-compose exec --user=www-data php vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix
 }
