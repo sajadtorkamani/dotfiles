@@ -8,12 +8,8 @@ function rsp() {
     dc exec php ./bin/console c:c
 }
 
-function _run-tests() {
-  ./clear-test-db.sh &&
-  export SYMFONY_DEPRECATIONS_HELPER=weak &&
-  php -d memory_limit=3072M ./vendor/bin/phpunit  --stop-on-failure  --filter
-}
 
+# Run PHPUnit tests inside Docker Composer service
 function dt() {
   if [ -z "$1" ]; then
     echo "Please provide a test filter"
