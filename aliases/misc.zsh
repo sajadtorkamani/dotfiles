@@ -9,7 +9,7 @@ function rsp() {
 }
 
 # Run specific PHPUnit tests inside Docker Composer service
-function dt() {
+function dtf() {
   if [ -z "$1" ]; then
     echo "Please provide a test filter"
     return
