@@ -16,9 +16,14 @@ function dtf() {
   fi
 
   dce php /bin/bash -c "
+    ./clear-test-db.sh &&
     export SYMFONY_DEPRECATIONS_HELPER=weak &&
     php -d memory_limit=3072M ./vendor/bin/phpunit  --stop-on-failure  --filter $1
   "
+}
+
+function ctd() {
+  dce php /bin/bash -c "./clear-test-db.sh"
 }
 
 # Run all PHPUnit tests inside Docker Composer service
