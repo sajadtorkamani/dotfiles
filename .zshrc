@@ -92,3 +92,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # AWS
 eval "$(aws configure export-credentials --profile default --format env)"
+
+[ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh

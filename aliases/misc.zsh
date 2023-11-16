@@ -31,6 +31,10 @@ function dta() {
   dce php /bin/bash -c "./test-parallel.sh"
 }
 
+function dci() {
+  dce php /bin/bash -c "composer install"
+}
+
 function phpcs() {
   docker-compose exec --user=www-data php vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix
 }
