@@ -35,6 +35,10 @@ function dci() {
   dce php /bin/bash -c "composer install"
 }
 
+function bc() {
+  dce php /bin/bash -c "bin/console $1"
+}
+
 function phpcs() {
   docker-compose exec --user=www-data php vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix
 }
