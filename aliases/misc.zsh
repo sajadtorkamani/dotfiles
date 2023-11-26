@@ -48,7 +48,7 @@ function bc() {
 }
 
 function phpcs() {
-  docker-compose exec --user=www-data php vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix
+  docker compose exec --user=www-data php vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix
 }
 
 function download-playlist() {

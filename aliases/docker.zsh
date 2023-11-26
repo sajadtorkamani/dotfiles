@@ -1,6 +1,6 @@
 alias d="docker"
-alias dc="docker-compose"
-alias dcr="docker-compose restart"
+alias dc="docker compose"
+alias dcr="docker compose restart"
 
 function restart-docker() {
   quit-docker
@@ -31,7 +31,7 @@ function docker-vm() {
   docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh
 }
 
-alias dce="docker-compose exec"
+alias dce="docker compose exec"
 
 function open-docker() {
   open -a Docker
