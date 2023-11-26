@@ -35,7 +35,11 @@ function dci() {
   dce php /bin/bash -c "composer install"
 }
 
-function db() {
+function dsh() {
+  dce "$1" /bin/bash
+}
+
+function dbash() {
   dce "$1" /bin/bash
 }
 
