@@ -12,6 +12,7 @@ export VISUAL=vim
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 export LANG="en_US.UTF-8"
+export AWS_PROFILE=default
 
 # Set path
 export PATH="$HOME/.rbenv/bin:$PATH"
