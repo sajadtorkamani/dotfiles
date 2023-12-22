@@ -32,6 +32,7 @@ alias la="exa -la"
 alias c="clear"
 alias dirsizes="sudo du -sh */ | sort -hr"
 alias sizes="du -ahd1"
+alias setup-dots="$HOME/code/dotfiles/scripts/setup.php"
 
 if is_linux; then
   alias copy="xclip -selection clipboard < $1"
