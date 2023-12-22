@@ -1,0 +1,8 @@
+alias n="npm"
+alias ni="npm install"
+alias nu="npm uninstall"
+alias nid="npm install -D"
+alias nr="npm run"
+alias nis="ni && nr start"
+alias nrs="npm run start"
+alias nclean="rm -rf node_modules package-lock.json && npm i"
