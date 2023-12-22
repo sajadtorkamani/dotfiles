@@ -6,7 +6,7 @@
 function symlinkAliases(): void
 {
     $aliasesDir = ROOT_PATH . '/aliases';
-    $aliasFiles = array_diff(scandir($aliasesDir), ['.', '..']);
+    $aliasFiles = array_diff(scandir($aliasesDir), ['.', '..', '.idea']);
 
     foreach ($aliasFiles as $aliasFile) {
         $src = $aliasesDir . '/' . $aliasFile;
@@ -14,7 +14,8 @@ function symlinkAliases(): void
 
         if (file_exists($dest)) {
             echo "Skipping: $dest already exists" . PHP_EOL;
-        } else {
+        }
+        else {
             symlink($src, $dest);
             echo "Aliases added: $aliasFile" . PHP_EOL;
         }
