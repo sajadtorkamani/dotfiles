@@ -7,7 +7,6 @@ function restart-docker() {
   open-docker
 }
 
-
 function docker-stop-all() {
   docker stop $(docker ps -q)
 }
@@ -35,4 +34,12 @@ alias dce="docker compose exec"
 
 function open-docker() {
   open -a Docker
+}
+
+function is-docker-project() {
+  if [ -f "docker-compose.yml" ]; then
+    return 0
+  else
+    return 1
+  fi
 }
