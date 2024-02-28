@@ -21,3 +21,8 @@ function npms() {
 
 alias npmlsg="npm ls -g --depth=0"
 alias asl="aws sso login"
+
+# Tmux
+alias t="tmux"
+alias tl="tmux ls"
+alias tx="tmux kill-server"

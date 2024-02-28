@@ -1,6 +1,7 @@
 alias n="npm"
 alias ni="npm install"
-alias nu="npm uninstall"
+alias nui="npm uninstall"
+alias nu="npm upgrade"
 alias nid="npm install -D"
 alias nr="npm run"
 alias nis="ni && nr start"
