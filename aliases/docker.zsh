@@ -1,6 +1,6 @@
 alias d="docker"
 alias dc="docker compose"
-alias dcr="docker compose restart"
+alias dcr="docker compose down && docker compose up -d"
 
 function restart-docker() {
   quit-docker
