@@ -95,3 +95,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(aws configure export-credentials --profile default --format env)"
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/sajad/Library/Application Support/Herd/config/php/83/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/sajad/Library/Application Support/Herd/bin/":$PATH
