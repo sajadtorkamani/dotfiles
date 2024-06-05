@@ -30,6 +30,12 @@ function dtfx() {
   "
 }
 
+function pst() {
+  dce php /bin/bash -c "
+    php -d memory_limit=3072M ./vendor/bin/phpstan analyse $1
+  "
+}
+
 function ctd() {
   dce php /bin/bash -c "./clear-test-db.sh"
 }

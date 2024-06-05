@@ -1,5 +1,6 @@
 alias gs="git status"
 alias gd="git diff"
+alias gdc="git diff --cached"
 alias ga="git add"
 alias gc="git commit"
 alias gcb="git checkout -b"
