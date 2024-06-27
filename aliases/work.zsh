@@ -59,7 +59,6 @@ function dbash() {
 
 function bc() {
   dce php /bin/bash -c "bin/console $1"
-  ho
 }
 
 function phpcs() {
