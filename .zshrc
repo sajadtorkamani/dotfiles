@@ -10,7 +10,7 @@ export NODE_ENV="development"
 export IDE="phpstorm"
 export VISUAL=vim
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_THEME="powerlevel10k/powerlevel10k"
+export ZSH_THEME="avit"
 export LANG="en_US.UTF-8"
 export AWS_PROFILE=default
 
@@ -37,9 +37,6 @@ export PATH="$PATH:$HOME/code/bin"
 # Load Oh My Zsh
 plugins=(composer docker git gem node npm)
 source $ZSH/oh-my-zsh.sh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Load NVM
 export NVM_DIR="$HOME/.nvm"
@@ -102,3 +99,4 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/sajad/Library/Application Support/Herd/c
 
 # Herd injected PHP binary.
 export PATH="/Users/sajad/Library/Application Support/Herd/bin/":$PATH
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
