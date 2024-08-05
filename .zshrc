@@ -32,6 +32,7 @@ fi
 
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$HOME/code/scripts/bin"
+export PATH="$PATH:$HOME/code/scripts/bin/rq"
 export PATH="$PATH:$HOME/code/bin"
 
 # Load Oh My Zsh
