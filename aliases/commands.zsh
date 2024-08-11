@@ -27,8 +27,8 @@ alias dmd=" dc exec --user=www-data php bin/console doc:mig:diff"
 alias dx="dc exec --user=www-data php"
 
 # System
-alias l="exa -l"
-alias la="exa -la"
+alias l="eza -l"
+alias la="eza -la"
 alias c="clear"
 alias dirsizes="sudo du -sh */ | sort -hr"
 alias sizes="du -ahd1"

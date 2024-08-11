@@ -5,18 +5,20 @@ source $BASE_PATH/lib/utils.sh
 source $BASE_PATH/lib/z.sh
 
 # Set env vars
+export AWS_PROFILE=default
 export EDITOR=vim
-export NODE_ENV="development"
 export IDE="phpstorm"
+export LANG="en_US.UTF-8"
+export PYENV_ROOT="$HOME/.pyenv"
+export NODE_ENV="development"
 export VISUAL=vim
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="avit"
-export LANG="en_US.UTF-8"
-export AWS_PROFILE=default
 
 # Set path
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 if is_mac; then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
@@ -48,13 +50,6 @@ if cmd_exists rbenv; then
   eval "$(rbenv init -)"
 fi
 
-if cmd_exists pyenv; then
-  # Load pyenv
-  eval "$(pyenv init -)"
-
-  # Load pyenv-virtualenv
-  eval "$(pyenv virtualenv-init -)"
-fi
 
 if is_linux; then
   # Prevent ctrl+s from freezing terminal (https://tinyurl.com/nsr9z9p8)
@@ -90,14 +85,17 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # AWS
-eval "$(aws configure export-credentials --profile default --format env)"
+eval "$(aws configure export-credentials --profile default --format env)"  > /dev/null 2>&1
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/sajad/Library/Application Support/Herd/config/php/83/"
 
-
 # Herd injected PHP binary.
 export PATH="/Users/sajad/Library/Application Support/Herd/bin/":$PATH
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if cmd_exists pyenv; then
+  eval "$(pyenv init -)"
+fi
