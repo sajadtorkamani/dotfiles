@@ -8,7 +8,8 @@ function symlinkDotfiles()
         '.tmux.conf',
         '.vim',
         '.vimrc',
-        '.zshrc'
+        '.zshrc',
+        'deno.json'
     ];
 
     foreach ($dotfiles as $dotfile) {

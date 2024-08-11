@@ -6,6 +6,7 @@ source $BASE_PATH/lib/z.sh
 
 # Set env vars
 export AWS_PROFILE=default
+export DENO_INSTALL="$HOME/.deno"
 export EDITOR=vim
 export IDE="phpstorm"
 export LANG="en_US.UTF-8"
@@ -36,6 +37,7 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$HOME/code/scripts/bin"
 export PATH="$PATH:$HOME/code/scripts/bin/rq"
 export PATH="$PATH:$HOME/code/bin"
+export PATH="$PATH:$DENO_INSTALL/bin"
 
 # Load Oh My Zsh
 plugins=(composer docker git gem node npm)
@@ -85,7 +87,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # AWS
-eval "$(aws configure export-credentials --profile default --format env)"  > /dev/null 2>&1
+aws configure export-credentials --profile default --format env  > /dev/null 2>&1
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
