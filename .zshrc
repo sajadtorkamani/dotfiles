@@ -87,7 +87,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # AWS
-aws configure export-credentials --profile default --format env  > /dev/null 2>&1
+ #aws configure export-credentials --profile default --format env  > /dev/null 2>&1
+eval "$(aws configure export-credentials --profile default --format env)"
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
@@ -101,3 +102,11 @@ export PATH="/Users/sajad/Library/Application Support/Herd/bin/":$PATH
 if cmd_exists pyenv; then
   eval "$(pyenv init -)"
 fi
+
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/sajadtorkamani/Library/Application Support/Herd/config/php/83/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/sajadtorkamani/Library/Application Support/Herd/bin/":$PATH
