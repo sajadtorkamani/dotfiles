@@ -27,6 +27,12 @@ if is_mac; then
   export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
   export PATH="/Applications/PhpStorm.app/Contents/MacOS:$PATH"
 
+  # Herd injected PHP 8.3 configuration.
+  export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
+
+  # Herd injected PHP binary.
+  export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
+
   # https://stackoverflow.com/a/47111756/2302835
   if cmd_exists python; then
     export PATH="$PATH:$(python -m site --user-base)/bin"
@@ -92,21 +98,6 @@ eval "$(aws configure export-credentials --profile default --format env)"
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/sajad/Library/Application Support/Herd/config/php/83/"
-
-# Herd injected PHP binary.
-export PATH="/Users/sajad/Library/Application Support/Herd/bin/":$PATH
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 if cmd_exists pyenv; then
   eval "$(pyenv init -)"
 fi
-
-
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/sajadtorkamani/Library/Application Support/Herd/config/php/83/"
-
-
-# Herd injected PHP binary.
-export PATH="/Users/sajadtorkamani/Library/Application Support/Herd/bin/":$PATH
