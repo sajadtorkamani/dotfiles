@@ -25,6 +25,7 @@ alias gsty="git add . && git commit -m 'Style' && git push origin HEAD"
 alias numcommits="git rev-list HEAD --count"
 alias gbranch="git symbolic-ref --short HEAD"
 alias gut="git ls-files -o -z --exclude-standard | xargs -0"
+alias gupstream='git branch --set-upstream-to=origin/git symbolic-ref --short HEAD`'
 
 function gbackup() {
   backupBranch="backup/$(gbranch)--$(isodate)"
