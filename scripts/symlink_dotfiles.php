@@ -9,6 +9,7 @@ function symlinkDotfiles()
         '.vim',
         '.vimrc',
         '.zshrc',
+        '.ideavimrc',
         'deno.json'
     ];
 
