@@ -65,3 +65,10 @@ function phpcs() {
   docker compose exec --user=www-data php vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix
 }
 
+function dspeed() {
+  if [ -d "/var/cache"]; then
+    dce php rm -rf /var/cache/*
+  fi
+
+  docker system prune --volumes --force
+}
