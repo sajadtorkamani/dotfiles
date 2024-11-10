@@ -58,7 +58,11 @@ function dbash() {
 }
 
 function bc() {
-  dce php /bin/bash -c "bin/console $1"
+  if [ -f "docker-compose.yml" ]; then
+    dce php /bin/bash -c "bin/console $1"
+  else
+    bin/console "$1"
+  fi
 }
 
 function phpcs() {
