@@ -44,3 +44,4 @@ function is-docker-project() {
     return 1
   fi
 }
+

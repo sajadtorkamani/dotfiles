@@ -15,17 +15,6 @@ alias ra="rs"
 alias bi="./bin/bundle install"
 alias ru="./bin/rubocop"
 
-# Symfony
-alias s="symfony"
-alias fix-tmp-permissions=" docker compose exec php chmod 777 -R /tmp/cache &&  docker compose exec php chmod 777 -R /tmp/log"
-alias cc="dc exec php bin/console cache:clear"
-alias cct="docker compose exec php bin/console cache:clear --env=test"
-alias dml="dc exec --user=www-data php bin/console doc:mig:list"
-alias dmm=" dc exec --user=www-data php bin/console doc:mig:mig"
-alias dmr=" dc exec --user=www-data php bin/console doc:mig:mig prev"
-alias dmd=" dc exec --user=www-data php bin/console doc:mig:diff"
-alias dx="dc exec --user=www-data php"
-
 # System
 alias l="eza -l"
 alias la="eza -la"

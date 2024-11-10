@@ -57,14 +57,6 @@ function dbash() {
   dce "$1" /bin/bash
 }
 
-function bc() {
-  if [ -f "docker-compose.yml" ]; then
-    dce php /bin/bash -c "bin/console $1"
-  else
-    bin/console "$1"
-  fi
-}
-
 function phpcs() {
   docker compose exec --user=www-data php vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix
 }
