@@ -30,10 +30,10 @@ function dmr() {
 # Symfony
 alias s="symfony"
 alias fix-tmp-permissions=" docker compose exec php chmod 777 -R /tmp/cache &&  docker compose exec php chmod 777 -R /tmp/log"
-alias cc="dc exec php bin/console cache:clear"
-alias cct="docker compose exec php bin/console cache:clear --env=test"
+alias cc="bc cache:clear"
+alias cct="bc cache:clear --env=test"
 alias dml="bc doc:mig:list"
-alias dmm=" dc exec --user=www-data php bin/console doc:mig:mig"
-alias dmd=" dc exec --user=www-data php bin/console doc:mig:diff"
+alias dmm="bc doc:mig:mig"
+alias dmd="bc doc:mig:diff"
 alias dx="dc exec --user=www-data php"
 
