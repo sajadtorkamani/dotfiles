@@ -19,7 +19,6 @@ set laststatus=2
 set nocompatible
 set autowrite  " Automatically :write before running commands
 set autoread
-set relativenumber
 
 " ------------------------------------
 " Vim appearance
