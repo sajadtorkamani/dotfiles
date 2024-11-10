@@ -1,10 +1,12 @@
 function bc() {
   if is-docker-project; then
     dce php /bin/bash -c "bin/console $1"
+    return 0
   fi
 
   if [ -f "bin/console" ]; then
     bin/console "$1"
+    return 0
   fi
 
   echo "ERROR: Not a Symfony project"
