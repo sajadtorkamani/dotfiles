@@ -26,6 +26,7 @@ alias numcommits="git rev-list HEAD --count"
 alias gbranch="git symbolic-ref --short HEAD"
 alias gut="git ls-files -o -z --exclude-standard | xargs -0"
 alias gupstream='git branch --set-upstream-to=origin/git symbolic-ref --short HEAD`'
+alias grecentcommits='git for-each-ref --sort=-committerdate refs/heads/ --format="%(committerdate:iso8601) %(refname:short)" | head'
 
 function gbackup() {
   backupBranch="backup/$(gbranch)--$(isodate)"
