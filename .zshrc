@@ -102,10 +102,8 @@ if cmd_exists pyenv; then
   eval "$(pyenv init -)"
 fi
 
-
 # Herd injected PHP binary.
 export PATH="/Users/sajadtorkamani/Library/Application Support/Herd/bin/":$PATH
-
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/sajadtorkamani/Library/Application Support/Herd/config/php/83/"
