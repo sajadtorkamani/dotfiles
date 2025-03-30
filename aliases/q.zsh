@@ -3,7 +3,7 @@ QUARTZ_DIR=$HOME/code/misc/quartz
 QUARTZ_CONTENT_DIR=$QUARTZ_DIR/content
 
 function qc() {
-  rsync -LPa "$VAULT_DIR"/* "$QUARTZ_CONTENT_DIR"/
+  rsync -LPa --delete "$VAULT_DIR"/* "$QUARTZ_CONTENT_DIR"/
 }
 
 function qd() {
