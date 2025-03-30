@@ -1,3 +1,5 @@
+alias dcc="docker restart memcached"
+
 function rsp() {
   dc exec php ./bin/console app:reset-roles-and-permissions --summary &&
     dc exec php ./bin/console c:c
@@ -68,3 +70,4 @@ function dspeed() {
 
   docker system prune --volumes --force
 }
+
