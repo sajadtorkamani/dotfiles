@@ -9,6 +9,7 @@ alias fleets="cd $HOME/Downloads/Fleeting && l"
 alias home="cd ~ && l"
 alias hosts="$EDITOR /etc/hosts"
 alias sites="cd $HOME/sites && l"
+alias vaults="cd $HOME/Google\ Drive/My\ Drive/Obsidian\ Vaults && l"
 
 if is_linux; then
   alias confs="cd /etc/nginx/sites-available && l"
