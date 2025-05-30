@@ -22,6 +22,9 @@ function npms() {
 alias npmlsg="npm ls -g --depth=0"
 alias asl="aws sso login"
 
+# Kubectl
+alias k="kubectl"
+
 # Tmux
 alias t="tmux"
 alias tl="tmux ls"
