@@ -12,10 +12,6 @@ if is_mac; then
   alias myip="ipconfig getifaddr en0"
 fi
 
-function p() {
-  ps -ax | grep $1
-}
-
 # List all ports in use
 alias ports="sudo lsof -Pn -i"
 

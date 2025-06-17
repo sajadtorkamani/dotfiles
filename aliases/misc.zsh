@@ -29,3 +29,6 @@ alias k="kubectl"
 alias t="tmux"
 alias tl="tmux ls"
 alias tx="tmux kill-server"
+
+# Prisma
+alias p="npx prisma"
