@@ -109,3 +109,7 @@ export PATH="/Users/sajadtorkamani/Library/Application Support/Herd/bin/":$PATH
 export HERD_PHP_83_INI_SCAN_DIR="/Users/sajadtorkamani/Library/Application Support/Herd/config/php/83/"
 
 export PATH=$HOME/.dotnet/tools:$PATH
+
+# Enable shell completion for 1Password CLI
+# https://developer.1password.com/docs/cli/reference/#shell-completion
+eval "$(op completion zsh)"; compdef _op op
