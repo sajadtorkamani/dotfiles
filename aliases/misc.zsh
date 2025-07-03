@@ -32,3 +32,5 @@ alias tx="tmux kill-server"
 
 # Prisma
 alias p="npx prisma"
+
+alias optsx="op run --env-file=\".env\" -- tsx"
