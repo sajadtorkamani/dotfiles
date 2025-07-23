@@ -44,6 +44,7 @@ export PATH="$PATH:$HOME/code/scripts/bin"
 export PATH="$PATH:$HOME/code/scripts/bin/rq"
 export PATH="$PATH:$HOME/code/bin"
 export PATH="$PATH:$DENO_INSTALL/bin"
+# export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
 
 # Load Oh My Zsh
 plugins=(composer docker git gem node npm)
