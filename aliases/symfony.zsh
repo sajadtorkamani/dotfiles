@@ -36,6 +36,6 @@ alias cc="bc cache:clear"
 alias cct="bc cache:clear --env=test"
 alias dml="bc doc:mig:list"
 alias dmm="bc doc:mig:mig"
-alias dmd="bc doc:mig:diff --formatted"
+alias dmd="bc doc:mig:diff"
 alias dx="dc exec --user=www-data php"
 
