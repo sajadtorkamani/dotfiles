@@ -32,6 +32,18 @@ function dtfx() {
   "
 }
 
+function dtfa {
+  if [ -z "$1" ]; then
+    echo "Please provide a test filter"
+    return
+  fi
+
+  dce php /bin/bash -c "
+    export SYMFONY_DEPRECATIONS_HELPER=weak &&
+    php -d memory_limit=3072M ./vendor/bin/phpunit   --filter $1
+  "
+}
+
 function pst() {
   dce php /bin/bash -c "
     php -d memory_limit=3072M ./vendor/bin/phpstan analyse $1
