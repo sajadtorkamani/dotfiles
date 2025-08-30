@@ -83,8 +83,6 @@ function dspeed() {
   docker system prune --volumes --force
 }
 
-
-# Run all PHPUnit tests inside Docker Composer service
 function logs-test() {
   dce php /bin/bash -c "tail -f /tmp/log/api-symfony-log/test.log"
 }
