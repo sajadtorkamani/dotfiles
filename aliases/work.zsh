@@ -56,7 +56,11 @@ function ctd() {
 
 # Run all PHPUnit tests inside Docker Composer service
 function dta() {
-  dce php /bin/bash -c "./test-parallel.sh"
+  if [ -f "./test-parallel.sh" ]; then
+    dce php /bin/bash -c "./test-parallel.sh"
+  else
+    dce php /bin/bash -c "./vendor/bin/phpunit"
+  fi
 }
 
 function dci() {
