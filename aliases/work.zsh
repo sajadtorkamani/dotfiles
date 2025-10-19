@@ -59,7 +59,7 @@ function dta() {
   if [ -f "./test-parallel.sh" ]; then
     dce php /bin/bash -c "./test-parallel.sh"
   else
-    dce php /bin/bash -c "./vendor/bin/phpunit"
+    dce php /bin/bash -c "./bin/test"
   fi
 }
 
