@@ -15,6 +15,7 @@ export NODE_ENV="development"
 export VISUAL=vim
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="avit"
+export JEDI_ENV=dev
 
 # Set path
 export PATH="$HOME/.rbenv/bin:$PATH"
