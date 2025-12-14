@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Check if a command exists
 function cmd_exists() {
   [[ -x "$(command -v $1)" ]]
