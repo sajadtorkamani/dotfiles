@@ -2,7 +2,7 @@ BASE_PATH=$HOME/code/dotfiles
 
 # Source a bunch of files
 source $BASE_PATH/lib/utils.sh
-source $BASE_PATH/lib/z.sh
+source $BASE_PATH/lib/external/z.sh
 
 # Set env vars
 export AWS_PROFILE=default
@@ -43,7 +43,6 @@ export PATH="$PATH:$HOME/code/scripts/bin/rq"
 export PATH="$PATH:$HOME/code/scripts/bin/jsoft"
 export PATH="$PATH:$HOME/code/bin"
 export PATH="$PATH:$DENO_INSTALL/bin"
-# export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
 
 # Load Oh My Zsh
 plugins=(composer docker git gem node npm)
