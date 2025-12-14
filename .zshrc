@@ -77,8 +77,8 @@ autoload bashcompinit
 bashcompinit
 
 # Setup bash completions
-source $BASE_PATH/lib/wp-completion.sh
-source $BASE_PATH/lib/deno.sh
+source $BASE_PATH/lib/completions/wp-completion.sh
+source $BASE_PATH/lib/completions/deno.sh
 
 # BEGIN SNIPPET: Platform.sh CLI configuration
 HOME=${HOME:-'/Users/sajad'}

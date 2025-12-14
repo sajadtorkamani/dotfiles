@@ -1,6 +1,6 @@
 alias path='echo $PATH | tr -s ":" "\n"'
 alias v="vim"
-alias isodate="date +'%Y%m%d%H%M%S'"
+alias isodate="date +'%Y-%m-%d_%H%M%S'"
 alias phpexec="dc exec --user=www-data php"
 
 function download-playlist() {

@@ -1,9 +1,0 @@
-#!/usr/bin/env node
-
-const moment = require('moment')
-
-const currentTime = moment();
-const futureTime = currentTime.add(4.5, 'hours');
-const formattedFutureTime = futureTime.format('HH:mm:ss')
-
-console.log(`In 4.5 hours, the time will be ${formattedFutureTime}`);
