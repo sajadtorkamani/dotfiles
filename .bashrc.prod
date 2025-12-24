@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-echo 'ok!'
+set -euo pipefail
+
+export PATH="$PATH:/home/sajad/code/scripts/bin"
