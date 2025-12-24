@@ -24,7 +24,7 @@ fi
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$HOME/code/scripts/bin"
 export PATH="$PATH:$HOME/code/scripts/bin/rq"
-export PATH="$PATH:$HOME/code/scripts/bin/jsoft"
+export PATH="$PATH:$HOME/code/scripts/bin/sajadtorkamani"
 export PATH="$PATH:$HOME/code/bin"
 export PATH="$PATH:$DENO_INSTALL/bin"
 export PATH=$HOME/.dotnet/tools:$PATH
