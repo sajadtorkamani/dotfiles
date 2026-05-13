@@ -68,3 +68,6 @@ fi
 # https://developer.1password.com/docs/cli/reference/#shell-completion
 eval "$(op completion zsh)"; compdef _op op
 
+
+export PATH="$HOME/.local/bin:$PATH"
+
