@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-# check if file exists in current or parent directory
-if [ -f "docker-compose.yml" ]; then
-  echo 'Inside docker-compose project'
-else
-  echo 'Not inside docker-compose project'
-fi
+set -eou pipefail
+
+last_commit=$(git log --pretty=format:"%s" --date=relative -n 1 | head -n 1)
+
+
+echo "$last_commit" > pbcopy
+
+echo "Last commit was: $last_commit (Copied to clipboard)"
+
