@@ -29,6 +29,8 @@ alias gupstream='git branch --set-upstream-to=origin/git symbolic-ref --short HE
 alias gbranches='git for-each-ref --sort=-committerdate refs/heads/ --format="%(committerdate:iso8601) %(refname:short)" | head'
 alias gbranchesall='git for-each-ref --sort=-committerdate refs/heads/ --format="%(committerdate:iso8601) %(refname:short)"'
 alias glastcommit
+alias delete-other-branches="git branch | grep -v '^\*' | xargs git branch -d"
+alias force-delete-other-branches="git branch | grep -v '^\*' | xargs git branch -d"
 
 function gbackup() {
   backupBranch="backup/$(gbranch)--$(isodate)"

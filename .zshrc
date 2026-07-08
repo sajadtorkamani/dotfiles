@@ -24,10 +24,6 @@ source "$BASE_PATH/lib/setup-path.zsh"
 plugins=(composer docker git gem node npm)
 source $ZSH/oh-my-zsh.sh
 
-# Load NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
 # Load rbenv
 if cmd_exists rbenv; then
   eval "$(rbenv init -)"
@@ -70,4 +66,8 @@ eval "$(op completion zsh)"; compdef _op op
 
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# Load NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
