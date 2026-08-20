@@ -27,3 +27,5 @@ passenger.*
 
 src/Command/Sajad
 
+
+**/.claude/settings.local.json
