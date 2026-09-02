@@ -35,3 +35,6 @@ alias p="npx prisma"
 
 # 1Password CLI
 alias optsx="op run --env-file=\".env\" -- tsx"
+
+# Herdr
+alias h="herdr"
