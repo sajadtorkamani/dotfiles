@@ -26,7 +26,7 @@ function dtfx() {
     return
   fi
 
-  dce php /bin/bash -c "
+  dce --user=www-data php /bin/bash -c "
     export SYMFONY_DEPRECATIONS_HELPER=weak &&
     php -d memory_limit=3072M ./vendor/bin/phpunit  --stop-on-failure  --filter $1
   "
