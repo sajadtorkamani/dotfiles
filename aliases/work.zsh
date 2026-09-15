@@ -19,7 +19,7 @@ function dtf() {
   "
 }
 
-# Run specific PHPUnit tests inside Docker Composer service
+# Run specific PHPUnit tests inside Docker Composer service without clearing test DB
 function dtfx() {
   if [ -z "$1" ]; then
     echo "Please provide a test filter"
@@ -29,18 +29,6 @@ function dtfx() {
   dce php /bin/bash -c "
     export SYMFONY_DEPRECATIONS_HELPER=weak &&
     php -d memory_limit=3072M ./vendor/bin/phpunit  --stop-on-failure  --filter $1
-  "
-}
-
-function dtfa {
-  if [ -z "$1" ]; then
-    echo "Please provide a test filter"
-    return
-  fi
-
-  dce php /bin/bash -c "
-    export SYMFONY_DEPRECATIONS_HELPER=weak &&
-    php -d memory_limit=3072M ./vendor/bin/phpunit   --filter $1
   "
 }
 
@@ -63,6 +51,7 @@ function dta() {
   fi
 }
 
+# Install composer dependencies
 function dci() {
   dce php /bin/bash -c "composer install"
 }
