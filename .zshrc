@@ -72,6 +72,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Load zsh-vi-mode (brew install zsh-vi-mode)
+# zsh-vi-mode resets key bindings when it initialises, so re-add Ctrl+R
+# (search history) afterwards.
+function zvm_after_init() {
+  bindkey -M viins '^R' history-incremental-search-backward
+  bindkey -M vicmd '^R' history-incremental-search-backward
+}
 if cmd_exists brew; then
   ZSH_VI_MODE_PLUGIN="$(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
   [ -f "$ZSH_VI_MODE_PLUGIN" ] && source "$ZSH_VI_MODE_PLUGIN"
