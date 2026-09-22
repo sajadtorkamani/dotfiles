@@ -71,4 +71,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# Load zsh-vi-mode (brew install zsh-vi-mode)
+if cmd_exists brew; then
+  ZSH_VI_MODE_PLUGIN="$(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
+  [ -f "$ZSH_VI_MODE_PLUGIN" ] && source "$ZSH_VI_MODE_PLUGIN"
+fi
