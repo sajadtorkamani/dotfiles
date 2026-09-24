@@ -52,3 +52,6 @@ function glastcommit() {
 
 
 alias gcreate=" gh repo create --private --source ."
+
+# Claude Code
+alias cap="claude '/commit-and-push'"
