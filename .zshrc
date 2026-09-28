@@ -63,17 +63,6 @@ if cmd_exists pyenv; then
   eval "$(pyenv init -)"
 fi
 
-
-# Enable shell completion for 1Password CLI
-# https://developer.1password.com/docs/cli/reference/#shell-completion
-# `op completion zsh` can hang (blocking shell startup), so load a cached copy
-# instead. Regenerate it with: op completion zsh > ~/.cache/op-completion.zsh
-OP_COMPLETION_CACHE="$HOME/.cache/op-completion.zsh"
-if [ -s "$OP_COMPLETION_CACHE" ]; then
-  source "$OP_COMPLETION_CACHE"; compdef _op op
-fi
-
-
 export PATH="$HOME/.local/bin:$PATH"
 
 # Load zsh-vi-mode (brew install zsh-vi-mode)
