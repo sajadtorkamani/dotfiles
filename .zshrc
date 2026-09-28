@@ -19,6 +19,10 @@ export JEDI_ENV=dev
 
 source "$BASE_PATH/lib/setup-path.zsh"
 
+# Load NVM early so a slow or hanging command later in this file can't stop
+# node/npm from being available.
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Load Oh My Zsh
 plugins=(composer docker git gem node npm)
@@ -62,14 +66,15 @@ fi
 
 # Enable shell completion for 1Password CLI
 # https://developer.1password.com/docs/cli/reference/#shell-completion
-eval "$(op completion zsh)"; compdef _op op
+# `op completion zsh` can hang (blocking shell startup), so load a cached copy
+# instead. Regenerate it with: op completion zsh > ~/.cache/op-completion.zsh
+OP_COMPLETION_CACHE="$HOME/.cache/op-completion.zsh"
+if [ -s "$OP_COMPLETION_CACHE" ]; then
+  source "$OP_COMPLETION_CACHE"; compdef _op op
+fi
 
 
 export PATH="$HOME/.local/bin:$PATH"
-
-# Load NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Load zsh-vi-mode (brew install zsh-vi-mode)
 # zsh-vi-mode resets key bindings when it initialises, so re-add Ctrl+R
