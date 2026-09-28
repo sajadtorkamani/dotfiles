@@ -11,7 +11,8 @@ function symlinkDotfiles()
         '.zshrc',
         '.ideavimrc',
         '.inputrc',
-        'deno.json'
+        'deno.json',
+        '.config/herdr/config.toml'
     ];
 
     foreach ($dotfiles as $dotfile) {
@@ -22,6 +23,12 @@ function symlinkDotfiles()
             echo "Skipped: $link already exists" . PHP_EOL;
         }
         else {
+            $linkDirectory = dirname($link);
+
+            if (!is_dir($linkDirectory)) {
+                mkdir($linkDirectory, 0755, true);
+            }
+
             symlink($target, $link);
             echo "Symlinked: $link points to $target" . PHP_EOL;
         }
