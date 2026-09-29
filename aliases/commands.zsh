@@ -21,7 +21,7 @@ alias la="eza -la"
 alias c="clear"
 alias dirsizes="sudo du -sh */ | sort -hr"
 alias sizes="du -ahd1"
-alias setup-dots="php $HOME/code/dotfiles/scripts/setup.php"
+alias setup-dots="go -C $HOME/code/dotfiles/scripts run ."
 
 if is_linux; then
   alias copy="xclip -selection clipboard < $1"
@@ -39,6 +39,6 @@ alias ya="yarn add"
 alias yad="yarn add -D"
 
 # Misc
-alias update-aliases="php $HOME/code/dotfiles/scripts/setup.php && szconf"
+alias update-aliases="go -C $HOME/code/dotfiles/scripts run . && szconf"
 alias xde="./xdebug.sh enable"
 alias xdd="./xdebug.sh disable"
