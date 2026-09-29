@@ -5,3 +5,10 @@ previous_tab = ["prefix+p", "ctrl+h"]
 next_tab = ["prefix+n", "ctrl+l"]
 close_tab = ["prefix+shift+x", "ctrl+w"]
 new_tab = "ctrl+t"
+toggle_sidebar = ["prefix+b", "ctrl+b"]
+
+[[keys.command]]
+key = "ctrl+x"
+type = "shell"
+command = "$HOME/.config/herdr/scripts/close-other-tabs.sh"
+description = "close all other tabs"
