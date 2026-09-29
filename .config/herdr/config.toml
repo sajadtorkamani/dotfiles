@@ -8,6 +8,8 @@ new_tab = "ctrl+t"
 toggle_sidebar = ["prefix+b", "ctrl+g"]
 previous_agent = "ctrl+k"
 next_agent = "ctrl+j"
+previous_workspace = "ctrl+shift+k"
+next_workspace = "ctrl+shift+j"
 
 [[keys.command]]
 key = "ctrl+x"
