@@ -6,6 +6,8 @@ next_tab = ["prefix+n", "ctrl+l"]
 close_tab = ["prefix+shift+x", "ctrl+w"]
 new_tab = "ctrl+t"
 toggle_sidebar = ["prefix+b", "ctrl+g"]
+previous_agent = "ctrl+shift+k"
+next_agent = "ctrl+shift+j"
 
 [[keys.command]]
 key = "ctrl+x"
