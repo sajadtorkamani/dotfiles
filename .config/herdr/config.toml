@@ -5,7 +5,7 @@ previous_tab = ["prefix+p", "ctrl+h"]
 next_tab = ["prefix+n", "ctrl+l"]
 close_tab = ["prefix+shift+x", "ctrl+w"]
 new_tab = "ctrl+t"
-toggle_sidebar = ["prefix+b", "ctrl+b"]
+toggle_sidebar = ["prefix+b", "ctrl+g"]
 
 [[keys.command]]
 key = "ctrl+x"
