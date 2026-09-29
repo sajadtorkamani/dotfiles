@@ -12,7 +12,8 @@ function symlinkDotfiles()
         '.ideavimrc',
         '.inputrc',
         'deno.json',
-        '.config/herdr/config.toml'
+        '.config/herdr/config.toml',
+        '.config/herdr/scripts'
     ];
 
     foreach ($dotfiles as $dotfile) {
