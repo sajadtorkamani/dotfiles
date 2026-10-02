@@ -23,7 +23,7 @@ My personal shell, editor and terminal configuration for macOS (with some Linux 
 ## Requirements
 
 - [Oh My Zsh](https://ohmyz.sh/)
-- PHP (to run the setup script)
+- Go 1.26+ (to run the setup script)
 - Git
 
 ## Installation
@@ -33,14 +33,14 @@ The repo is expected to live at `~/code/dotfiles` (`.zshrc` sources files from t
 ```sh
 git clone git@github.com:sajadtorkamani/dotfiles.git ~/code/dotfiles
 cd ~/code/dotfiles
-php scripts/setup.php
+go -C scripts run .
 ```
 
 The setup script:
 
-1. Clones Vim plugins into `.vim/` (see `scripts/clone_vim_packages.php`).
+1. Clones Vim plugins into `.vim/` (see `scripts/clone_vim_packages.go`).
 2. Symlinks every file in `aliases/` into `~/.oh-my-zsh/custom/`.
-3. Symlinks the dotfiles listed in `scripts/symlink_dotfiles.php` into `$HOME`.
+3. Symlinks the dotfiles listed in `scripts/symlink_dotfiles.go` into `$HOME`.
 
 Existing files are never overwritten — they're skipped with a message, so remove or back them up first if you want them replaced.
 
@@ -53,5 +53,5 @@ source ~/.zshrc
 ## Adding a new dotfile
 
 1. Add the file to this repo at the same relative path it should have under `$HOME`.
-2. Add that path to the `$dotfiles` array in `scripts/symlink_dotfiles.php`.
-3. Re-run `php scripts/setup.php`.
+2. Add that path to the `dotfiles` slice in `scripts/symlink_dotfiles.go`.
+3. Re-run `go -C scripts run .`.
