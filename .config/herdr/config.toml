@@ -14,6 +14,8 @@ previous_agent = "ctrl+k"
 next_agent = "ctrl+j"
 previous_workspace = "ctrl+shift+k"
 next_workspace = "ctrl+shift+j"
+close_workspace = "ctrl+shift+w"
+new_workspace = "ctrl+shift+n"
 
 [[keys.command]]
 key = "ctrl+x"
