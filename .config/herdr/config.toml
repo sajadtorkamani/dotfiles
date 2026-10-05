@@ -1,4 +1,8 @@
 onboarding = false
+
+[ui.sound]
+enabled = false
+
 [keys]
 prefix = "ctrl+a"
 previous_tab = ["prefix+p", "ctrl+h"]
