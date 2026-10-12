@@ -13,6 +13,7 @@ My personal shell, editor and terminal configuration for macOS (with some Linux 
 | `.ideavimrc` | IdeaVim config for JetBrains IDEs |
 | `.tmux.conf` | tmux config |
 | `.config/herdr/` | herdr config and helper scripts |
+| `.config/karabiner/` | Karabiner-Elements key remapping config (whole directory is symlinked, as Karabiner recommends) |
 | `.inputrc` | Readline config |
 | `.gitignore_global` | Global gitignore |
 | `.rspec` | Default RSpec options |
