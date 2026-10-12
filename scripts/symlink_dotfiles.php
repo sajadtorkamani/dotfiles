@@ -13,7 +13,8 @@ function symlinkDotfiles()
         '.inputrc',
         'deno.json',
         '.config/herdr/config.toml',
-        '.config/herdr/scripts'
+        '.config/herdr/scripts',
+        '.config/karabiner'
     ];
 
     foreach ($dotfiles as $dotfile) {
