@@ -60,6 +60,35 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "description": "Notion: ctrl+x closes other tabs (via the tab's right-click menu)",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "~/.config/karabiner/scripts/notion-close-other-tabs.sh"
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^notion\\.id$"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
