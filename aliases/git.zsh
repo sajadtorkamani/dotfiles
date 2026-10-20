@@ -31,6 +31,9 @@ alias gbranchesall='git for-each-ref --sort=-committerdate refs/heads/ --format=
 alias glastcommit
 alias delete-other-branches="git branch | grep -v '^\*' | xargs git branch -d"
 alias force-delete-other-branches="git branch | grep -v '^\*' | xargs git branch -D"
+# The main worktree is always listed first, so skip it and remove the rest
+alias remove-all-worktrees="git worktree list --porcelain | grep '^worktree ' | tail -n +2 | cut -d' ' -f2- | xargs -I{} git worktree remove {}; git worktree prune"
+alias force-remove-all-worktrees="git worktree list --porcelain | grep '^worktree ' | tail -n +2 | cut -d' ' -f2- | xargs -I{} git worktree remove --force {}; git worktree prune"
 
 function gbackup() {
   backupBranch="backup/$(gbranch)--$(isodate)"
