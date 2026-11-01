@@ -1,25 +1,26 @@
 # dotfiles
 
-My personal shell, editor and terminal configuration for macOS (with some Linux support).
+My personal shell, editor and terminal configuration for macOS (with some Linux
+support).
 
 ## What's included
 
-| Path | Description |
-| --- | --- |
-| `.zshrc` | Zsh config (Oh My Zsh, NVM, rbenv, Bun, AWS, completions) |
-| `aliases/` | Zsh aliases and functions, grouped by topic (git, docker, npm, symfony, etc.) |
-| `lib/` | Helpers sourced by `.zshrc` (PATH setup, utils, Linux config, third-party completions) |
-| `.vimrc`, `.vim/` | Vim config. Plugins are cloned into `.vim/` by the setup script |
-| `.ideavimrc` | IdeaVim config for JetBrains IDEs |
-| `.tmux.conf` | tmux config |
-| `.config/herdr/` | herdr config and helper scripts |
+| Path                 | Description                                                                                     |
+|----------------------|-------------------------------------------------------------------------------------------------|
+| `.zshrc`             | Zsh config (Oh My Zsh, NVM, rbenv, Bun, AWS, completions)                                       |
+| `aliases/`           | Zsh aliases and functions, grouped by topic (git, docker, npm, symfony, etc.)                   |
+| `lib/`               | Helpers sourced by `.zshrc` (PATH setup, utils, Linux config, third-party completions)          |
+| `.vimrc`, `.vim/`    | Vim config. Plugins are cloned into `.vim/` by the setup script                                 |
+| `.ideavimrc`         | IdeaVim config for JetBrains IDEs                                                               |
+| `.tmux.conf`         | tmux config                                                                                     |
+| `.config/herdr/`     | herdr config and helper scripts                                                                 |
 | `.config/karabiner/` | Karabiner-Elements key remapping config (whole directory is symlinked, as Karabiner recommends) |
-| `.inputrc` | Readline config |
-| `.gitignore_global` | Global gitignore |
-| `.rspec` | Default RSpec options |
-| `deno.json` | Deno formatter settings |
-| `misc/` | Extras such as the Solarized Dark iTerm2 colour scheme |
-| `scripts/` | Setup scripts |
+| `.inputrc`           | Readline config                                                                                 |
+| `.gitignore_global`  | Global gitignore                                                                                |
+| `.rspec`             | Default RSpec options                                                                           |
+| `deno.json`          | Deno formatter settings                                                                         |
+| `misc/`              | Extras such as the Solarized Dark iTerm2 colour scheme                                          |
+| `scripts/`           | Setup scripts                                                                                   |
 
 ## Requirements
 
@@ -29,7 +30,8 @@ My personal shell, editor and terminal configuration for macOS (with some Linux 
 
 ## Installation
 
-The repo is expected to live at `~/code/dotfiles` (`.zshrc` sources files from that path).
+The repo is expected to live at `~/code/dotfiles` (`.zshrc` sources files from
+that path).
 
 ```sh
 git clone git@github.com:sajadtorkamani/dotfiles.git ~/code/dotfiles
@@ -43,7 +45,8 @@ The setup script:
 2. Symlinks every file in `aliases/` into `~/.oh-my-zsh/custom/`.
 3. Symlinks the dotfiles listed in `scripts/symlink_dotfiles.php` into `$HOME`.
 
-Existing files are never overwritten — they're skipped with a message, so remove or back them up first if you want them replaced.
+Existing files are never overwritten — they're skipped with a message, so remove
+or back them up first if you want them replaced.
 
 Then reload your shell:
 
@@ -53,6 +56,7 @@ source ~/.zshrc
 
 ## Adding a new dotfile
 
-1. Add the file to this repo at the same relative path it should have under `$HOME`.
+1. Add the file to this repo at the same relative path it should have under
+   `$HOME`.
 2. Add that path to the `$dotfiles` array in `scripts/symlink_dotfiles.php`.
 3. Re-run `php scripts/setup.php`.
