@@ -51,6 +51,15 @@ function dta() {
   fi
 }
 
+# Run all PHPUnit tests inside Docker Composer service, skipping the composer audit preflight
+function dtax() {
+  if [ -f "./test-parallel.sh" ]; then
+    dce php /bin/bash -c "./test-parallel.sh skip-preflight"
+  else
+    dce php /bin/bash -c "./bin/test"
+  fi
+}
+
 # Install composer dependencies
 function dci() {
   dce php /bin/bash -c "composer install"
