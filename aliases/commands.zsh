@@ -1,3 +1,6 @@
+# Claude Code
+alias cc="claude"
+
 # Composer
 alias co="composer"
 

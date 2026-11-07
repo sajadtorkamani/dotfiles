@@ -32,7 +32,6 @@ function dmr() {
 # Symfony
 alias s="symfony"
 alias fix-tmp-permissions=" docker compose exec php chmod 777 -R /tmp/cache &&  docker compose exec php chmod 777 -R /tmp/log"
-alias cc="bc cache:clear"
 alias cct="bc cache:clear --env=test"
 alias dml="bc doc:mig:list"
 alias dmm="bc doc:mig:mig"
