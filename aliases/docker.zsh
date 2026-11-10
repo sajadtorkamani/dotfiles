@@ -19,7 +19,6 @@ function ssh-docker() {
 function quit-docker() {
   if is_mac; then
     osascript -e 'quit app "Docker"'
-        'deno.json'
   else
     echo "Don't know how to exit Docker on non-macOS system."
     exit 1
