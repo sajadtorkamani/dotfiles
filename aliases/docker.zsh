@@ -1,6 +1,7 @@
 alias d="docker"
 alias dc="docker compose"
 alias dcr="docker compose down && docker compose up -d"
+alias docker-space="docker run --rm alpine df -h /"
 
 function restart-docker() {
   quit-docker
